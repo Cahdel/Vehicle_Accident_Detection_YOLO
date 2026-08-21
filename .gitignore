@@ -1,0 +1,9 @@
+*.pt
+*.zip
+__pycache__/
+*.py[cod]
+*$py.class
+*.cpython-312
+*.onnx
+YOLOv11 L & N Vehicle and Accident Detection Results/
+ss/
