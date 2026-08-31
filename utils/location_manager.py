@@ -84,7 +84,7 @@ def get_all_location_names():
     """Get list semua nama lokasi yang tersimpan"""
     locations = load_saved_locations()
     # Tambahkan preset locations
-    preset_names = ["Simpang Pidada", "Fullscreen 720p", "Fullscreen 360p"]
+    preset_names = ["Fullscreen 720p", "Fullscreen 360p"]
     saved_names = list(locations.keys())
     
     # Gabungkan dan remove duplicates

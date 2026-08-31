@@ -9,10 +9,6 @@ from pathlib import Path
 
 # Preset polygon coordinates untuk berbagai lokasi CCTV
 PRESET_POLYGONS = {
-    "Simpang Pidada": {
-        "video": np.array([[550, 394], [1032, 423], [968, 717], [130, 666]]),
-        "realtime": np.array([[290, 197], [516, 211], [484, 358], [100, 333]])
-    },
     "Fullscreen 720p": {
         "video": np.array([[0, 0], [1280, 0], [1280, 720], [0, 720]]),
         "realtime": None

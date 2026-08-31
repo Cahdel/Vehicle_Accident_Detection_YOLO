@@ -82,7 +82,7 @@ def main():
                 from utils.location_manager import get_all_location_names, delete_location, is_preset_location
                 all_locations = get_all_location_names()
             except:
-                all_locations = ["Simpang Pidada", "Fullscreen 720p"]
+                all_locations = ["Fullscreen 720p"]
             
             # Add custom drawing option
             all_locations.append("Draw Custom Area")
@@ -94,12 +94,13 @@ def main():
                 location = st.selectbox(
                     "Select Location",
                     all_locations,
+                    index=len(all_locations) - 1,
                     key="video_location_select"
                 )
             
             with col_manage:
                 # Show delete button only for saved (non-preset) locations
-                if location not in ["Draw Custom Area", "Simpang Pidada", "Fullscreen 720p", "Fullscreen 360p"]:
+                if location not in ["Draw Custom Area", "Fullscreen 720p", "Fullscreen 360p"]:
                     try:
                         if not is_preset_location(location):
                             if st.button("🗑️ Delete", use_container_width=True, key="video_delete_location"):
