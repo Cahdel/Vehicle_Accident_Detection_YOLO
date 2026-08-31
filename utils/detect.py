@@ -9,7 +9,7 @@ from utils.annotation import add_annotations
 def get_video_writer():
     """Get or create a VideoWriter for saving annotated frames to disk instead of RAM."""
     if 'video_writer' not in st.session_state or st.session_state.video_writer is None:
-        output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'outputTest')
+        output_dir = '/tmp'
         os.makedirs(output_dir, exist_ok=True)
         output_path = os.path.join(output_dir, 'output_video.mp4')
         st.session_state.video_output_path = output_path
@@ -18,7 +18,7 @@ def get_video_writer():
 
 def init_video_writer(frame_width, frame_height, fps):
     """Initialize the VideoWriter with frame dimensions."""
-    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'outputTest')
+    output_dir = '/tmp'
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, 'output_video.mp4')
     writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))

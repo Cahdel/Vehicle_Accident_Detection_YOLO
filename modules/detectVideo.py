@@ -175,9 +175,8 @@ def main():
             st.markdown("---")
             st.header("Detection Settings")
             
-            # Get list of models available
-            model_files = [f for f in os.listdir(model_path) if f.endswith('.pt')]
-            selected_model = st.sidebar.selectbox("Select Model", model_files)
+            # Hardcoded model for HF Spaces deployment
+            selected_model = "Augmen3x-Yolov11m.pt"
 
             # Control buttons
             if 'status' not in st.session_state:

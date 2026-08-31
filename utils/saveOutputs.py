@@ -57,7 +57,7 @@ def save_and_provide_download_button(current_dir, FPS, model):
     
     # Fallback: if no VideoWriter path, use legacy approach
     if video_file_path is None or not os.path.exists(video_file_path):
-        video_file_path = os.path.join(current_dir, '..', 'outputTest', 'output_video.mp4')
+        video_file_path = os.path.join('/tmp', 'output_video.mp4')
         # Legacy: save from RAM if annotated_frames exist
         if st.session_state.get('annotated_frames'):
             save_video(st.session_state.annotated_frames, video_file_path, FPS)
